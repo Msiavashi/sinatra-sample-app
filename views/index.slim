@@ -5,3 +5,9 @@ ul.tasks
 form method="POST" action="/"
   input type="text" name = "task"
   input type="submit" value="new task >>"
+
+h2 my tasks
+
+ul.tasks
+  - @tasks.each do |task|
+    == slim :task, locals: {task: task}
